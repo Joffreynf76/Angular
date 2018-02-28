@@ -1,0 +1,14 @@
+
+<h1>Films disponibles ({{movieList.length}})</h1>
+<div *ngIf="movieList.length>0;else erreur">
+  <div *ngFor="let film of movieList" class="film" appSurvolFilm="">
+    <h2 (click)="myEvent(film.titre)">{{film.titre}}</h2>
+    <p><a href="{{film.lien}}">{{film.realisateur}}</a></p>
+    <p class="date">{{film.date | date:"dd/MM/yyyy"}}</p>
+    <p>{{film.note | note}} <a routerLink="/film/{{film.id}}">+détails</a></p>
+
+  </div>
+</div>
+  <ng-template #erreur>
+  <p>Aucun film</p>
+</ng-template>

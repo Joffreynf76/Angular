@@ -1,0 +1,9 @@
+<form #registerForm="ngForm" (ngSubmit)="register()">
+    <input type="text" [(ngModel)]="user.username" name="username" placeholder="Nom d'utilisateur" required>
+    <input type="password" [(ngModel)]="user.password" name="password" placeholder="Mot de passe" required pattern=".{6,}">
+    <select [(ngModel)]="user.role" name="role">
+      <option *ngFor="let roles of role" [value]="roles">{{roles}}</option>
+    </select>
+  <button type="submit" [disabled]="!registerForm.form.valid">S'inscrire</button>
+</form>
+

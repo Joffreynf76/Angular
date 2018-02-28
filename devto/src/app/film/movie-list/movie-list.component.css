@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.film {
+    background-color: ghostwhite;
+
+
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+a:hover {
+    color:black;
+}
+
+.date {
+    font-style:italic ;
+}
