@@ -3,7 +3,7 @@ import { Http} from "@angular/http";
 
 @Injectable()
 export class GestionFilmService {
-  private movieList: Array<object>;
+  private movieList: Array<any>;
   constructor( private http : Http) {
       /*this.movieList = [{
           id:'1',

@@ -9,7 +9,7 @@ import { GestionFilmService} from '../../gestion-film.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
-    private movieList : Array <object>;
+    private movieList : Array <any>;
     private nbrFilm : number;
 
   constructor(private router : Router,private gestionFilm : GestionFilmService) { }
