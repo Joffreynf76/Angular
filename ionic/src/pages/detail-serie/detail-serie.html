@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{serie.titre}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <img src="{{serie.poster}}"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{serie.titre}}
+      </ion-card-title>
+      <p>
+        {{serie.resume}}
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <a href="{{serie.video}}">
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='ios-videocam'></ion-icon>
+          Bande annonce
+        </button>
+        </a>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Partager
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
+

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      A la Une...
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="divertissement">
+      <ion-segment-button value="films">
+        Films
+      </ion-segment-button>
+      <ion-segment-button value="series">
+        Séries
+      </ion-segment-button>
+      <ion-segment-button value="jeux">
+        Jeux Vidéos
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="divertissement">
+    <ion-list *ngSwitchCase="'films'">
+      <ion-item *ngFor="let film of films">
+        <ion-thumbnail item-start>
+          <img src="{{film.image}}">
+        </ion-thumbnail>
+        <h2>{{film.titre}}</h2>
+
+        <button [navPush]="detailPage" [navParams]="{id:film.id}">Détails</button>
+      </ion-item>
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'series'">
+      <ion-item *ngFor="let serie of series">
+        <ion-thumbnail item-start>
+          <img src="{{serie.image}}">
+        </ion-thumbnail>
+        <h2>{{serie.titre}}</h2>
+        <button [navPush]="detailserie" [navParams]="{id:serie.id}">Détails</button>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'jeux'">
+      <ion-item *ngFor="let jeu of jeux">
+        <ion-thumbnail item-start>
+          <img src="{{jeu.image}}">
+        </ion-thumbnail>
+        <h2>{{jeu.titre}}</h2>
+        <button [navPush]="detailjeux" [navParams]="{id:jeu.id}">Détails</button>
+      </ion-item>
+
+
+    </ion-list>
+  </div>
+</ion-content>
